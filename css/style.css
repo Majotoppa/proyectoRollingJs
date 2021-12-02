@@ -1,0 +1,18 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
+
+.nav{
+ background-image: linear-gradient( 103.3deg, rgb(252, 225, 208) 30%, rgba(255,173,214,1) 55.7%, rgba(162,186,245,1) 81.8% );
+ padding: 35px;
+}
+
+.letraricco{
+  font-family: 'Gwendolyn', cursive;
+ text-decoration: none;
+ color: rgba(168, 164, 164, 0.801);
+}
+
+.letranav{
+  color: brown;
+}
+

@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&family=Lato:wght@300&family=Orbitron:wght@700&family=Outfit:wght@300&display=swap');
 
-.letras {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Gwendolyn', cursive;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Outfit', sans-serif;
+}
+
+.cambiarLetra {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 #imagenFondoADN{

@@ -14,6 +14,7 @@ let formularioProducto = document.querySelector("#formProducto")
 
 //ASOCIAR LA FUNCIÓN CAMPO REQUERIDO AL EVENTO BLUR
 campoCodigo.addEventListener("blur", () =>{campoRequerido (campoCodigo)});
+//campoCodigo.addEventListener("load", generarNumerosAleatorios(0,9));
 campoProducto.addEventListener("blur", () =>{campoRequerido (campoProducto)});
 
 campoDescripcion.addEventListener("blur", () =>{campoRequerido (campoDescripcion)});
@@ -36,6 +37,8 @@ function generarNumerosAleatorios(minimo, maximo) {
   for (let i = 1; i <= 1; ++i){
       console.log(generarNumerosAleatorios(0,999));
   }
+
+ campoCodigo.value = generarNumerosAleatorios(0,999)
 
 
   //Función que guarda los productos

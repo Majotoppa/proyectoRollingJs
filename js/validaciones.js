@@ -18,7 +18,7 @@ export function campoRequerido(input){
 
 export function validarNumeros(input){
     //1.- crea una EXPRESIÓN REGULAR
-    let patron = /^[1-9]{1,2}$/;
+    let patron = /^[0-9]{1,2}$/;
     //probar que la Expresión regular funcione
     if(patron.test(input.value)){
         //si cumple la expresión regular

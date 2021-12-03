@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="JavaScript">
+    <meta name="author" content=" Marin, Toppa, Cortez D'Elia, Navarro,Arriola" />
+    <meta name="keywords" content="helados, dulce, sabor, fresco, rico," />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Ricco's</title>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Ricco's</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="admin.html">Administración</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="container">
+      <section>
+        <h1 class="display-3 mt-5 text-center"> Administrar Productos</h1>
+        <hr>
+        <form class="container" id="formProducto">
+            <div class="mb-3">
+                <label for="codigoID" class="form-label">Código</label>
+                <input type="text" class="form-control" id="codigoID" placeholder="12345">
+                <div class="invalid-feedback">Debe ingresar al menos un caracter</div>
+              </div>
+              
+
+              <div class="mb-3">
+                <label for="productos" class="form-label">Productos</label>
+                <input type="text" class="form-control" id="producto" placeholder="12345">
+                
+              </div>
+
+              <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripcion</label>
+                <textarea name="" id="descripcion" class="form-control" rows="3" placeholder="Agregue la descripcion del producto" ></textarea> 
+              </div>
+
+              <div class="mb-3">
+                <label for="cantidad" class="form-label">Cantidad</label>
+                <input type="text" class="form-control" id="cantidad" placeholder="10">
+              </div>
+
+              <div class="mb-3">
+                <label for="url" class="form-label">URL</label>
+                <input type="text" class="form-control" id="url" placeholder="12345">
+              </div>
+
+              <button class="btn btn-primary" type="submit">Guardar</button>
+        </form>
+        <div class="alert alert-danger my-3 d-none" role="alert" id="msjAlerta">
+         Debe completar todos los datos
+        </div>
+
+      </section>
+      <h1 class="display-3 mt-5 text-center"> Tabla Productos</h1>
+        <hr>
+        <div>
+          <button class="btn btn-primary" type="submit" id="btnAgregar">Nuevo</button>
+          <button class="btn btn-secondary" type="submit">Cargar datos de Prueba</button>
+        </div>
+        <div class="my-3 table-responsive">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Cod</th>
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>URL</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tablaProductos">
+              <tr>
+                <th>994</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>asdasd</td>
+                <td> <button class="btn btn-warning">Editar</button> <button class="btn btn-danger">Borrar</button> </td>
+              </tr>
+          
+              
+            
+            </tbody>
+          </table>
+
+        </div>
+
+      <section>
+
+      </section>
+        
+    </main>
+    <footer></footer>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/admin.js" type="module"></script>
+</body>
+</html>

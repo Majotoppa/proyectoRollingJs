@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
+
+.letras {
+    font-family: 'Gwendolyn', cursive;
+}
+
+#imagenFondoADN{
+    min-height: 100vh;
+    background: linear-gradient(rgba(5, 7, 12, 0.75),
+     rgba(5, 7, 12, 0.75)), 
+    url(/img/helados\ en\ cucurucho\ sobre\ mesa.jpg) 
+    no-repeat center center fixed;
+    background-size: cover;
+}

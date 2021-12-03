@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
 
 
-
-nav{
-    padding-bottom: 300px;
-    
-}
-
-.color{
-    background: black;
-    padding-bottom: 20px;
-    
-}
-
 /*footer*/ 
 .footer{
     background: rgb(31, 30, 30);
@@ -31,10 +19,3 @@ nav{
    color: rgb(163, 158, 158);
 }
 
-.letra:hover{
-    position: relative; 
-    bottom: 3px;
-    left: 3px;
-    filter: opacity(50%);
-    transition: 1050ms;
-}

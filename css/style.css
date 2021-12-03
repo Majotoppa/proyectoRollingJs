@@ -16,3 +16,24 @@
   color: brown;
 }
 
+.helado{
+  width: 50px;
+  height: 75px;
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 640px){
+  .helado{
+    display: none;
+  }
+
+  .seccion{
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .helado{
+    display: none;
+  }
+}

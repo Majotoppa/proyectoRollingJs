@@ -14,6 +14,15 @@ let campoURL = document.querySelector("#url")
 //TRAER EL <form> completo
 let formularioProducto = document.querySelector("#formProducto")
 
+//Creo un ARRAY [] en el que se guardará el objeto producto
+
+let listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+
+//Creo una variable booleana 
+//si productoExistente = false, es porque quiero CREAR un producto
+let productoExistente = false;
+
+
 //ASOCIAR LA FUNCIÓN CAMPO REQUERIDO AL EVENTO BLUR
 campoCodigo.addEventListener("blur", () =>{campoRequerido (campoCodigo)});
 //campoCodigo.addEventListener("load", generarNumerosAleatorios(0,9));
@@ -71,13 +80,51 @@ function generarNumerosAleatorios(minimo, maximo) {
 
 
 //FUNCION PARA CREAR PRODUCTOS
-  function crearProducto(){
-    console.log("aquí creo el producto");
+function crearProducto(){
+    
     //creo variable llamada "productoNuevo" que contiene el Objeto producto, luego lo muestro por consola
     let productoNuevo = new Producto(campoCodigo.value, campoProducto.value, campoDescripcion.value, 
     campoCantidad.value, campoURL.value);
         
     console.log(productoNuevo);
 
+    //agrego el producto nuevo un array[] 
+    listaProductos.push(productoNuevo);
+    console.log(listaProductos);
+
+    limpiarFormulario();
+
+    //llamo a la función para guardar el producto en el LocalStorage
+    guadarLocalStorage()
+
+    //agrego la estética de la ventana que indica que el producto fue creado
+    Swal.fire(
+        'Producto Creado',//título
+        'Su producto fue creado correctamente',//párrafo descriptivo
+        'success'// ícono
+      )
+
   }
+
+//FUNCIÓN PARA LIMPIAR EL FORMULARIO una vez creado el producto
+function limpiarFormulario(){
+    //uso el método reset para resetear los value
+    formularioProducto.reset();
+    //limpiar las clases de bootstrap, los is-valid, is invalid
+    campoCodigo.className = "form-control"
+    campoProducto.className = "form-control"
+    campoDescripcion.className = "form-control"
+    campoCantidad.className = "form-control"
+    campoURL.className = "form-control"
+
+    //limpiar variable booleanda
+    productoExistente = false;
+
+}
+
+//FUNCIÓN PARA GUARDAR EL PRODUCTO EL PRODUCTO EN EL LOCALSTORAGE
+
+function guadarLocalStorage(){
+    localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos))
+}
   

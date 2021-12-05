@@ -1,6 +1,8 @@
 //Agrego los import
 import{campoRequerido, validarNumeros, validarURL, validarGeneral} from "./validaciones.js";
 
+import {Producto} from "./productoClass.js"; 
+
 //TRAIGO los <input> del formulario "Administrar Productos"
 
 let campoCodigo = document.querySelector("#codigoID");
@@ -67,7 +69,15 @@ function generarNumerosAleatorios(minimo, maximo) {
       }
   }
 
+
+//FUNCION PARA CREAR PRODUCTOS
   function crearProducto(){
-    console.log("aquí creo el producto")
+    console.log("aquí creo el producto");
+    //creo variable llamada "productoNuevo" que contiene el Objeto producto, luego lo muestro por consola
+    let productoNuevo = new Producto(campoCodigo.value, campoProducto.value, campoDescripcion.value, 
+    campoCantidad.value, campoURL.value);
+        
+    console.log(productoNuevo);
+
   }
   

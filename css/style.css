@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&family=Lato:wght@300&family=Orbitron:wght@700&family=Outfit:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellota:ital@1&display=swap');
 /* General */ 
- 
+
 h2,
 h3,
 h4,
@@ -48,4 +48,68 @@ h6 {
    text-decoration: none;
    color: rgb(163, 158, 158);
    font-family: 'Bellota', cursive;
+}
+
+
+/*admin*/
+
+#imagenFondoADMIN{
+    min-height: 90vh;
+    background: linear-gradient(rgba(5, 7, 12, 0.75),
+     rgba(5, 7, 12, 0.75)), 
+    url(/img/milk-train-el-diseno-de-una-heladeria-londinense-art-deco-e-instagramers-5-1200x900.jpg) 
+    no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Outfit', sans-serif;
+
+}
+
+/*estilos del NAV*/
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
+
+.nav{
+ background-image: rgb(0, 0, 0);
+ padding: 35px;
+}
+
+.letra{
+    font-family: 'Jockey One', sans-serif;
+}
+
+.letraricco{
+  font-family: 'Gwendolyn', cursive;
+ text-decoration: none;
+ color: rgba(168, 164, 164, 0.801);
+}
+
+.letranav{
+  color: brown;
+}
+
+.helado{
+  width: 50px;
+  height: 75px;
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 640px){
+  .helado{
+    display: none;
+  }
+
+  .seccion{
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .helado{
+    display: none;
+  }
+  .seccion{
+    width: 100px;
+  }
 }

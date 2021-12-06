@@ -103,6 +103,9 @@ function crearProducto(){
         'Su producto fue creado correctamente',//párrafo descriptivo
         'success'// ícono
       )
+     //CREO UNA NUEVA FILA EN LA TABLA
+
+        crearFila(productoNuevo);
 
   }
 
@@ -126,5 +129,19 @@ function limpiarFormulario(){
 
 function guadarLocalStorage(){
     localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos))
+}
+
+//FUNCIÓN para que se cree una nueva fila en la tabla, cada vez que se crea un nuevo producto
+function crearFila(paramProducto){
+    let tabla = document.querySelector("#tablaProductos")
+    tabla.innerHTML += `<tr>
+    <th>${paramProducto.codigo}</th>
+    <td>${paramProducto.producto}</td>
+    <td>${paramProducto.descripcion}</td>
+    <td>${paramProducto.cantidad}</td>
+    <td>${paramProducto.url}</td>
+    <td> <button class="btn btn-warning" onclick="prepararEdicionProducto(${paramProducto.codigo})">Editar</button>
+     <button class="btn btn-danger" onclick="borrarProducto(${paramProducto.codigo})">Borrar</button> </td>
+  </tr>`
 }
   

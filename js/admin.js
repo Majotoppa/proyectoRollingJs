@@ -49,7 +49,11 @@ function generarNumerosAleatorios(minimo, maximo) {
       console.log(generarNumerosAleatorios(0,999));
   }
 
- campoCodigo.value = generarNumerosAleatorios(0,999)
+ campoCodigo.value = generarNumerosAleatorios(0,999);
+
+ //llamar a la función cargarInicial
+
+cargaInicial();
 
 
   //Función que guarda los productos
@@ -143,5 +147,21 @@ function crearFila(paramProducto){
     <td> <button class="btn btn-warning" onclick="prepararEdicionProducto(${paramProducto.codigo})">Editar</button>
      <button class="btn btn-danger" onclick="borrarProducto(${paramProducto.codigo})">Borrar</button> </td>
   </tr>`
+}
+
+//creo función que se fije si existen datos en el localStorage
+function cargaInicial(){
+    //preguntar si hay datos en Local Storage
+    //si hay datos---> que se cree la fila
+    if(listaProductos.length > 0){
+        //dibujar fila
+        listaProductos.forEach((itemProducto)=>{crearFila(itemProducto)});
+    }
+}
+
+//Función que borra las filas
+function borrarTabla(){
+    let tabla = document.querySelector("#tablaProductos")
+    tabla.innerHTML = " "; 
 }
   

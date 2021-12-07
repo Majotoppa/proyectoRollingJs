@@ -49,3 +49,42 @@ h6 {
    color: rgb(163, 158, 158);
    font-family: 'Bellota', cursive;
 }
+
+ @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
+
+.nav{
+ background-image: linear-gradient( 103.3deg, rgb(252, 225, 208) 30%, rgba(255,173,214,1) 55.7%, rgba(162,186,245,1) 81.8% );
+ padding: 35px;
+}
+
+.letraricco{
+  font-family: 'Gwendolyn', cursive;
+ text-decoration: none;
+ color: rgba(168, 164, 164, 0.801);
+}
+
+.letranav{
+  color: brown;
+}
+
+.helado{
+  width: 50px;
+  height: 75px;
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 640px){
+  .helado{
+    display: none;
+  }
+
+  .seccion{
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .helado{
+    display: none;
+  }
+}

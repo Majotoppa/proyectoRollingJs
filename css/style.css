@@ -54,7 +54,6 @@ h6 {
    font-family: 'Bellota', cursive;
 }
 
-<<<<<<< HEAD
  @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
 
 .nav{
@@ -62,7 +61,6 @@ h6 {
  padding: 35px;
 }
 
-=======
 
 /*admin*/
 
@@ -92,7 +90,6 @@ h1{
     font-family: 'Jockey One', sans-serif;
 }
 
->>>>>>> paginaDeadministracion
 .letraricco{
   font-family: 'Gwendolyn', cursive;
  text-decoration: none;
@@ -123,10 +120,7 @@ h1{
   .helado{
     display: none;
   }
-<<<<<<< HEAD
-=======
   .seccion{
     width: 100px;
   }
->>>>>>> paginaDeadministracion
 }

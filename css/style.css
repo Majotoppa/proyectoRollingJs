@@ -21,11 +21,11 @@ h6 {
 
 /* Pag acerca de Nosotros */
  
-#imagenFondoADN{
+#imagenFondoMF{
     min-height: 90vh;
     background: linear-gradient(rgba(5, 7, 12, 0.75),
      rgba(5, 7, 12, 0.75)), 
-    url(/img/helados\ en\ cucurucho\ sobre\ mesa.jpg) 
+    url(/img/heladossobremesapagMF.webp) 
     no-repeat center center fixed;
     background-size: cover;
 }
@@ -36,11 +36,9 @@ h6 {
 
 
 /* Footer */
- 
-.footer{
-    background: rgb(31, 30, 30);
-    color:white;
-    padding: 5px;
+
+.footer {
+ background-color:  rgb(33, 37, 41);
 }
 
 .letras{
@@ -54,11 +52,8 @@ h6 {
    font-family: 'Bellota', cursive;
 }
 
- @import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
-
-.nav{
- background-image: linear-gradient( 103.3deg, rgb(252, 225, 208) 30%, rgba(255,173,214,1) 55.7%, rgba(162,186,245,1) 81.8% );
- padding: 35px;
+.hr {
+  background-color: white;
 }
 
 
@@ -79,12 +74,6 @@ h1{
 }
 
 /*estilos del NAV*/
-@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
-
-.nav{
- background-image: rgb(0, 0, 0);
- padding: 35px;
-}
 
 .letra{
     font-family: 'Jockey One', sans-serif;
@@ -96,31 +85,13 @@ h1{
  color: rgba(168, 164, 164, 0.801);
 }
 
-.letranav{
-  color: brown;
-}
+/* Quienes somos */ 
 
-.helado{
-  width: 50px;
-  height: 75px;
-}
-
-
-@media screen and (min-width: 360px) and (max-width: 640px){
-  .helado{
-    display: none;
-  }
-
-  .seccion{
-    width: 100px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px){
-  .helado{
-    display: none;
-  }
-  .seccion{
-    width: 100px;
-  }
+#imagenFondoQS{
+  min-height: 90vh;
+  background: linear-gradient(rgba(5, 7, 12, 0.75),
+   rgba(5, 7, 12, 0.75)), 
+  url(/img/helados\ en\ tachos\ mini\ pag\ QS.jpeg) 
+  no-repeat center center fixed;
+  background-size: cover;
 }

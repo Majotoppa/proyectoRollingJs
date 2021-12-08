@@ -36,11 +36,9 @@ h6 {
 
 
 /* Footer */
- 
-.footer{
-    background: rgb(31, 30, 30);
-    color:white;
-    padding: 5px;
+
+.footer {
+ background-color:  rgb(33, 37, 41);
 }
 
 .letras{
@@ -52,6 +50,10 @@ h6 {
    text-decoration: none;
    color: rgb(163, 158, 158);
    font-family: 'Bellota', cursive;
+}
+
+.hr {
+  background-color: white;
 }
 
 

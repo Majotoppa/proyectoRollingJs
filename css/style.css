@@ -72,6 +72,7 @@ h1{
 }
 
 /*estilos del NAV*/
+
 .letra{
     font-family: 'Jockey One', sans-serif;
 }
@@ -80,26 +81,6 @@ h1{
   font-family: 'Gwendolyn', cursive;
  text-decoration: none;
  color: rgba(168, 164, 164, 0.801);
-}
-
-
-@media screen and (min-width: 360px) and (max-width: 640px){
-  .helado{
-    display: none;
-  }
-
-  .seccion{
-    width: 100px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px){
-  .helado{
-    display: none;
-  }
-  .seccion{
-    width: 100px;
-  }
 }
 
 /* Quienes somos */ 

@@ -65,17 +65,17 @@ cargaInicial();
     e.preventDefault();
 
     if(validarGeneral(campoCodigo, campoProducto, campoDescripcion,campoCantidad, campoURL)){
-        //if( productoExistente == false){
-             //caso 1: Presiono guardar y SE CREA un producto  //agregar o crear producto
+        if( productoExistente == false){
+        //caso 1: Presiono guardar y SE CREA un producto  //agregar o crear producto
         //llamo la función crear producto
              
         crearProducto();
 
-        //}else{
+        }else{
             
         //caso 2:
-        //modificarProducto();
-        //}
+        modificarProducto();
+        }
 
 
         
@@ -163,5 +163,43 @@ function cargaInicial(){
 function borrarTabla(){
     let tabla = document.querySelector("#tablaProductos")
     tabla.innerHTML = " "; 
+}
+
+//función para EDITAR PRODUCTO
+
+
+//función para modificar producto
+function modificarProducto(){
+    console.log("aquí quiero modificar este producto");
+    //buscar la posición de mi producto dentro del arreglo
+    let posicionDelProducto = listaProductos.findIndex((itemProducto)=>{return itemProducto.codigo == campoCodigo.value});
+    console.log(posicionDelProducto)
+
+    //modificar los datos del producto dentro del arreglo
+    listaProductos[posicionDelProducto].producto = campoProducto.value;
+    listaProductos[posicionDelProducto].descripcion = campoDescripcion.value;
+    listaProductos[posicionDelProducto].cantidad = campoCantidad.value;
+    listaProductos[posicionDelProducto].url = campoURL.value;
+    console.log(listaProductos);  
+    //actualizar los datos del Local Storage
+    guadarLocalStorage();
+
+    //mostrar un cartel al usuario diciendo que se modificó correctamente
+    Swal.fire(
+        'Producto Modificado',//título
+        'Su producto fue modificado correctamente',//párrafo descriptivo
+        'success'// ícono
+      )
+
+    //limpiar los datos del formulario
+    limpiarFormulario();
+
+    //que se actualice en la tabla
+    //1ºborrar todo lo que hay en la tabla
+    borrrTabla();
+
+    //2ºvolver a dibujar la fila
+    listaProductos.forEach((itemProducto)=>{crearFila(itemProducto)});
+
 }
   

@@ -13,7 +13,7 @@ function crearCard(produdctoMaquetado){
         <div class="card-body">
           <h5 class="card-title">${produdctoMaquetado.producto}</h5>
           <p class="card-text">${produdctoMaquetado.descripcion}
-          ${produdctoMaquetado.cantidad}
+          
           </p>
         </div>
       </div>

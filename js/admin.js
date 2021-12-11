@@ -38,6 +38,8 @@ campoURL.addEventListener("blur", () =>{validarURL (campoURL)});
 //Asociar la función que guarda un producto al evento Submit
 formularioProducto.addEventListener("submit",guardarProducto);
 
+btnAgregar.addEventListener('click', limpiarFormulario);
+
 //FUNCIÓN QUE GENERA NÚMEROS ALEATORIOS
 //PARA HACER CÓDIGOS ÚNICOS
 
@@ -204,7 +206,6 @@ function modificarProducto(){
     console.log(listaProductos);  
     //actualizar los datos del Local Storage
     guadarLocalStorage();
-
     //mostrar un cartel al usuario diciendo que se modificó correctamente
     Swal.fire(
         'Producto Modificado',//título

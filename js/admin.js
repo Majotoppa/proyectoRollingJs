@@ -167,6 +167,27 @@ function borrarTabla(){
 
 //función para EDITAR PRODUCTO
 
+window.prepararEdicionProducto = function (codigoParametro) {
+        
+    console.log(codigoParametro)
+    //esta funcion
+    //tiene que OBTENER el objeto a modificar
+    let productoBuscado = listaProductos.find((itemProducto)=>{return itemProducto.codigo == codigoParametro})
+    console.log(productoBuscado);
+
+    //mostrar los datos en el form
+
+    campoCodigo.value = productoBuscado.codigo;
+    campoProducto.value = productoBuscado.producto;
+    campoDescripcion.value = productoBuscado.descripcion;
+    campoCantidad.value = productoBuscado.cantidad;
+    campoURL.value = productoBuscado.url;
+    //clase 29/11/21 10.02 hs
+    ///aquí modifico la variable boolean
+    productoExistente = true;
+
+}
+
 
 //función para modificar producto
 function modificarProducto(){
@@ -202,4 +223,31 @@ function modificarProducto(){
     listaProductos.forEach((itemProducto)=>{crearFila(itemProducto)});
 
 }
-  
+
+
+//función para BORRAR producto
+
+
+window.borrarProducto = function (codigoParaMetro){
+    console.log(codigoParaMetro);
+    //borro el producto del arreglo
+    let arregloProductoBorrado = listaProductos.filter((itemProducto)=>{return itemProducto.codigo != codigoParaMetro})
+    console.log(arregloProductoBorrado);
+
+    //actualizar del local storage
+    //actualizo el arreglo original
+    listaProductos = arregloProductoBorrado;
+    guadarLocalStorage();
+
+    //actualizar los datos de la tabla
+    borrarTabla()
+
+    listaProductos.forEach((itemProducto)=>{crearFila(itemProducto)});
+
+    Swal.fire(
+        'Producto Eliminado',//título
+        'Su producto fue eliminado correctamente',//párrafo descriptivo
+        'success'// ícono
+      )
+
+}

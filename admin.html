@@ -45,7 +45,7 @@
       <section class="container">
         <h1 class="display-3 text-center py-4"> Administrar Productos</h1>
         <hr>
-        <form class="container" id="formProducto">
+        <form id="formProducto">
             <div class="mb-3">
                 <label for="codigoID" class="form-label">Código</label>
                 <input type="text" class="form-control" id="codigoID" placeholder="Ingrese el código del Producto">
@@ -79,17 +79,16 @@
         <div class="alert alert-danger my-3 d-none" role="alert" id="msjAlerta">
          Debe completar todos los datos
         </div>
-
       </section>
+      <section class="container">
       <h1 class="display-3 mt-5 text-center"> Tabla Productos</h1>
         <hr>
-        <div class="container">
+        <div>
           <button class="btn btn-primary" type="submit" id="btnAgregar">Nuevo</button>
           <button class="btn btn-secondary" type="submit">Cargar datos de Prueba</button>
         </div>
         <div class="mx-3 table-responsive">
-
-          <table class="table mb-3 container">
+          <table class="table mb-3">
             <thead>
               <tr class="text-light">
                 <th>Cod</th>
@@ -101,9 +100,6 @@
               </tr>
             </thead>
             <tbody id="tablaProductos" class="text-light">
-              <tr>
-                
-              </tr>
             </tbody>
           </table>
         </div>

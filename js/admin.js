@@ -196,7 +196,7 @@ function modificarProducto(){
 
     //que se actualice en la tabla
     //1ºborrar todo lo que hay en la tabla
-    borrrTabla();
+    borrarTabla();
 
     //2ºvolver a dibujar la fila
     listaProductos.forEach((itemProducto)=>{crearFila(itemProducto)});

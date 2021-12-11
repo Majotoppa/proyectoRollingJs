@@ -22,4 +22,3 @@ function crearCard(produdctoMaquetado){
   </div>`  
 }
 
-console.log(crearCard);

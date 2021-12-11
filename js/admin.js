@@ -53,7 +53,7 @@ campoCodigo.value = generarNumerosAleatorios(0,999);
 
 btnAgregar.addEventListener('click', limpiarFormulario);
 
-borrarTable.addEventListener('click', borrarTabla);
+borrarTable.addEventListener('click', borrarTabla2);
 
 
 //llamar a la función cargarInicial
@@ -161,6 +161,14 @@ function cargaInicial(){
 function borrarTabla(){
     let tabla = document.querySelector("#tablaProductos")
     tabla.innerHTML = " "; 
+}
+
+//Función que borra la tabla, incluyendo los datos de la LocalStorage
+function borrarTabla2(){
+  let tabla = document.querySelector('#tablaProductos');
+  tabla.className = 'text-white lead'
+  tabla.innerHTML = 'Todos los productos fueron eliminados, por favor completa el formulario así tomamos tu pedido.';
+  localStorage.clear();
 }
 
 //función para EDITAR PRODUCTO

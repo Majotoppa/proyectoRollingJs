@@ -21,6 +21,7 @@ let listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || []
 //Creo una variable booleana 
 //si productoExistente = false, es porque quiero CREAR un producto
 let productoExistente = false;
+let productoCreado = false;
 
 
 //ASOCIAR LA FUNCIÓN CAMPO REQUERIDO AL EVENTO BLUR
@@ -157,17 +158,17 @@ function cargaInicial(){
     }
 }
 
+
 //Función que borra las filas
 function borrarTabla(){
-    let tabla = document.querySelector("#tablaProductos")
-    tabla.innerHTML = " "; 
+  let tabla = document.querySelector("#tablaProductos")
+  tabla.innerHTML = ""; 
 }
 
 //Función que borra la tabla, incluyendo los datos de la LocalStorage
 function borrarTabla2(){
   let tabla = document.querySelector('#tablaProductos');
-  tabla.className = 'text-white lead'
-  tabla.innerHTML = 'Todos los productos fueron eliminados, por favor completa el formulario así tomamos tu pedido.';
+  tabla.innerHTML = ""; 
   localStorage.clear();
 }
 

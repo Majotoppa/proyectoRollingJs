@@ -19,7 +19,7 @@ export function campoRequerido(input){
 export function validarNumeros(input){
     //1.- crea una EXPRESIÓN REGULAR
     //let patron = /^[1-99]{1,2}$/;
-    let patron = /^(|[1-9]+[0-9]{0,1})$/
+    let patron = /^(|[1-9]{1,3})$/;
     //probar que la Expresión regular funcione
     if(patron.test(input.value)){
         //si cumple la expresión regular
@@ -70,12 +70,12 @@ export function validarGeneral(campoCodigo, campoProducto, campoDescripcion, cam
     validarNumeros(campoCantidad)&&
     validarURL(campoURL)){
         //console.log("sí pasó la validación");
-        alerta.className = "alert alert-danger my-3 d-none";
+        alerta.className = "alert alert-danger my-3 d-none text-center lead";
         return true;
     }else{
         //console.log("no pasó la validación");
         
-        alerta.className = "alert alert-danger my-3"; 
+        alerta.className = "alert alert-danger my-3 text-center lead"; 
         return false;
     }
 

@@ -21,6 +21,7 @@ let listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || []
 //Creo una variable booleana 
 //si productoExistente = false, es porque quiero CREAR un producto
 let productoExistente = false;
+let productoCreado = false;
 
 
 //ASOCIAR LA FUNCIÓN CAMPO REQUERIDO AL EVENTO BLUR
@@ -42,16 +43,21 @@ formularioProducto.addEventListener("submit",guardarProducto);
 //PARA HACER CÓDIGOS ÚNICOS
 
 function generarNumerosAleatorios(minimo, maximo) {
-    return Math.floor(Math.random() * (maximo - minimo) + minimo);
-  }
+  return Math.floor(Math.random() * (maximo - minimo) + minimo);
+}
 
-  for (let i = 1; i <= 1; ++i){
-      console.log(generarNumerosAleatorios(0,999));
-  }
+for (let i = 1; i <= 1; ++i){
+  console.log(generarNumerosAleatorios(0,999));
+}
 
- campoCodigo.value = generarNumerosAleatorios(0,999);
+campoCodigo.value = generarNumerosAleatorios(0,999);
 
- //llamar a la función cargarInicial
+btnAgregar.addEventListener('click', limpiarFormulario);
+
+borrarTable.addEventListener('click', borrarTabla2);
+
+
+//llamar a la función cargarInicial
 
 cargaInicial();
 
@@ -68,17 +74,11 @@ cargaInicial();
         if( productoExistente == false){
         //caso 1: Presiono guardar y SE CREA un producto  //agregar o crear producto
         //llamo la función crear producto
-             
         crearProducto();
-
         }else{
-            
         //caso 2:
         modificarProducto();
         }
-
-
-        
       }
   }
 
@@ -119,14 +119,13 @@ function limpiarFormulario(){
     formularioProducto.reset();
     //limpiar las clases de bootstrap, los is-valid, is invalid
     campoCodigo.className = "form-control"
-    campoProducto.className = "form-control"
+    campoProducto.className= "form-control"
     campoDescripcion.className = "form-control"
     campoCantidad.className = "form-control"
     campoURL.className = "form-control"
-
     //limpiar variable booleanda
     productoExistente = false;
-
+    campoCodigo.value = generarNumerosAleatorios(0,999);
 }
 
 //FUNCIÓN PARA GUARDAR EL PRODUCTO EL PRODUCTO EN EL LOCALSTORAGE
@@ -159,10 +158,18 @@ function cargaInicial(){
     }
 }
 
+
 //Función que borra las filas
 function borrarTabla(){
-    let tabla = document.querySelector("#tablaProductos")
-    tabla.innerHTML = " "; 
+  let tabla = document.querySelector("#tablaProductos")
+  tabla.innerHTML = ""; 
+}
+
+//Función que borra la tabla, incluyendo los datos de la LocalStorage
+function borrarTabla2(){
+  let tabla = document.querySelector('#tablaProductos');
+  tabla.innerHTML = ""; 
+  localStorage.clear();
 }
 
 //función para EDITAR PRODUCTO
@@ -204,7 +211,6 @@ function modificarProducto(){
     console.log(listaProductos);  
     //actualizar los datos del Local Storage
     guadarLocalStorage();
-
     //mostrar un cartel al usuario diciendo que se modificó correctamente
     Swal.fire(
         'Producto Modificado',//título

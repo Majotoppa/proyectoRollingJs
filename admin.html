@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name="description" content="JavaScript">
-    <meta name="author" content=" Marin, Toppa, Cortez D'Elia, Navarro,Arriola" />
+    <meta name="author" content="Valentin Arriola, Nicolas Cortez D'Elia, Luján Marin, Luciano Navarro & Maria Jose Toppa"/>
     <meta name="keywords" content="helados, dulce, sabor, fresco, rico," />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <title>Ricco's</title>
-
 </head>
 <body>
     <header>
@@ -42,68 +40,59 @@
       </nav>
     </header>
     <main id="imagenFondoADMIN" class="text-light">
-      <section class="container">
+      <section class="container pb-4">
         <h1 class="display-3 text-center py-4"> Administrar Productos</h1>
         <hr>
-        <form class="container" id="formProducto">
+        <form id="formProducto">
             <div class="mb-3">
-                <label for="codigoID" class="form-label">Código</label>
-                <input type="text" class="form-control" id="codigoID" placeholder="Ingrese el código del Producto">
+                <label for="codigoID" class="form-label">Código:</label>
+                <input type="text" class="form-control" id="codigoID" placeholder="Ingrese el código del Producto." disabled>
                 <div class="invalid-feedback">Debe ingresar al menos un caracter</div>
               </div>
-              
-
               <div class="mb-3">
-                <label for="producto" class="form-label">Productos</label>
-                <input type="text" class="form-control" id="producto" placeholder="Ingrese el Nombre del Producto">
-                
+                <label for="producto" class="form-label">Productos:</label>
+                <input type="text" class="form-control" id="producto" placeholder="Ingrese el Nombre del Producto.">
               </div>
-
               <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripcion</label>
-                <textarea name="" id="descripcion" class="form-control" rows="3" placeholder="Ingrese la Descripción del producto" ></textarea> 
+                <label for="descripcion" class="form-label">Descripcion:</label>
+                <textarea name="" id="descripcion" class="form-control" rows="3" placeholder="Ingrese la Descripción del producto." ></textarea> 
               </div>
-
               <div class="mb-3">
-                <label for="cantidad" class="form-label">Cantidad</label>
-                <input type="text" class="form-control" id="cantidad" placeholder="Ingrese la Cantidad de productos que desea agregar">
+                <label for="cantidad" class="form-label">Cantidad:</label>
+                <input type="text" class="form-control" id="cantidad" placeholder="Ingrese la Cantidad de productos que desea agregar.">
               </div>
-
               <div class="mb-3">
-                <label for="url" class="form-label">URL</label>
-                <input type="text" class="form-control" id="url" placeholder="Ingrese la URL correspondiente al producto">
+                <label for="url" class="form-label">URL:</label>
+                <input type="text" class="form-control" id="url" placeholder="Ingrese la URL correspondiente al producto.">
               </div>
-
+              <div class="d-flex justify-content-center pt-3">
               <button class="btn btn-primary" type="submit">Guardar</button>
+            </div>
         </form>
-        <div class="alert alert-danger my-3 d-none" role="alert" id="msjAlerta">
-         Debe completar todos los datos
+        <div class="alert alert-danger my-3 d-none text-center lead" role="alert" id="msjAlerta">
+         Debe completar todos los campos para hacer el pedido.
         </div>
-
       </section>
-      <h1 class="display-3 mt-5 text-center"> Tabla Productos</h1>
-        <hr>
-        <div class="container">
-          <button class="btn btn-primary" type="submit" id="btnAgregar">Nuevo</button>
-          <button class="btn btn-secondary" type="submit">Cargar datos de Prueba</button>
+      <hr class="container">
+      <section class="container">
+      <h1 class="display-3 mt-5 text-center">Tabla de Productos</h1>
+        <div class="d-flex justify-content-center py-3">
+          <button class="btn btn-primary mx-2" type="submit" id="btnAgregar">Nuevo</button>
+          <button class="btn btn-secondary mx-2" type="submit" id="borrarTable">Borrar todos los productos cargados</button>
         </div>
         <div class="mx-3 table-responsive">
-
-          <table class="table mb-3 container">
+          <table class="table mb-3">
             <thead>
               <tr class="text-light">
-                <th>Cod</th>
-                <th>Producto</th>
-                <th>Descripción</th>
-                <th>Cantidad</th>
-                <th>URL</th>
-                <th>Acciones</th>
+                <th>Codigo:</th>
+                <th>Producto:</th>
+                <th>Descripción:</th>
+                <th>Cantidad:</th>
+                <th>URL:</th>
+                <th>Acciones:</th>
               </tr>
             </thead>
             <tbody id="tablaProductos" class="text-light">
-              <tr>
-                
-              </tr>
             </tbody>
           </table>
         </div>

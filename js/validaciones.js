@@ -19,7 +19,7 @@ export function campoRequerido(input){
 export function validarNumeros(input){
     //1.- crea una EXPRESIÓN REGULAR
     
-    let patron = /^(|[1-9]{1,3})$/;
+    let patron = /[^A-Za-z0-9_]/;
     //probar que la Expresión regular funcione
     if(patron.test(input.value)){
         //si cumple la expresión regular

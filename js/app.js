@@ -16,7 +16,7 @@ function crearCard(productoMaquetado){
         <div class="card-body">
           <h5 class="card-title">${productoMaquetado.producto}</h5>
           <p class="card-text">${productoMaquetado.descripcion}
-          ${productoMaquetado.cantidad}
+          
           </p>
         </div>
       </div>

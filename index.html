@@ -47,9 +47,10 @@
         </div>
       </nav>
     </header>
-      <main>
-        <section>
-          <article class="d-flex justify-content-center">
+      <main class="bg-dark my-1">
+        <section id="imagenFondoPP">
+        <article class="pt-4">
+          <div class="d-flex justify-content-center">
             <div id="carouselHelados"  class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselHelados" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -76,19 +77,127 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+        </div>
         </article>
-        </section>
-        <section class="container">
-          <h1 class="display-3 mt-5 text-center">Catalogo de Productos</h1>
-          <hr />
-          <article>
-            <form class="my-3" id="BuscarForm">
+        <article class="container mt-3">
+          <h1 class="display-3 text-center titulosSecundarios fw-bold text-white">Catalogo de Productos</h1>
+          <hr class="hr"/>
+          <div>
+            <form class="my-3 row" id="BuscarForm">
+              <div class="col-sm-12 col-md-11">
               <input class="form-control form-control-lg my-2" type="text" placeholder="Ingrese el código o nombre del Producto"  aria-label=".form-control-lg example" id="idBuscador" name="idBuscador">
-              <input type="submit" class="btn btn-secondary" value="Buscar">
-          </article>
+              </div>
+              <div class="col-sm-12 col-md-1 d-flex justify-content-center align-items-center">
+              <input type="submit" class="btn btn-secondary h-75" value="Buscar">
+              </div>
+            </div>
+          <hr class="hr"/>
           <article class="row" id='grillaPrincipal'>
           </article>
+        </article>
         </section>
+        <section id="imagenFondoPP2">
+          <article class="container">
+          <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 pt-5 d-flex">
+            <div class="bg-white">
+              <p class="h3 fs-1 fw-bold titulosSecundarios py-3 text-center border border-5"><strong>Categorias</strong></p>
+              <ul
+                class="list-group list-group-flush fs-2 fw-bold"
+                id="categorias"
+              >
+                <a
+                  href="/error404.html"
+                  class="
+                    list-group-item list-group-item-action
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  "
+                  >Helado crema
+                  <span class="badge bg-dark rounded-pill">56</span></a
+                >
+                <a
+                  href="/error404.html"
+                  class="
+                    list-group-item list-group-item-action
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  "
+                  >Helado de leche
+                  <span class="badge bg-dark rounded-pill">34</span></a
+                >
+                <a
+                  href="/error404.html"
+                  class="
+                    list-group-item list-group-item-action
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  "
+                  >Helado de leche desnatada <span class="badge bg-dark rounded-pill">22</span></a
+                >
+                <a
+                  href="/error404.html"
+                  class="
+                    list-group-item list-group-item-action
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  "
+                  >Helado de agua
+                  <span class="badge bg-dark rounded-pill">80</span></a
+                >
+                <a
+                  href="/error404.html"
+                  class="
+                    list-group-item list-group-item-action
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  "
+                  >Sorbete <span class="badge bg-dark rounded-pill">45</span></a
+                >
+                <a
+                  href="/error404.html"
+                  class="
+                    list-group-item list-group-item-action
+                    d-flex
+                    justify-content-between
+                    align-items-center
+                  "
+                  >Postre de helado
+                  <span class="badge bg-dark rounded-pill">47</span></a
+                >
+              </ul>
+            </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-8 pt-5">
+              <img src="/img/helados en palito.jpeg" alt="variedad de helados en palitos" class="img-fluid">
+            </div>
+        </div>
+      </article>
+      <article class="d-flex justify-content-center pt-5">
+      <nav aria-label="Page navigation example d-flex">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="/error404.html" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="/index.html">1</a></li>
+          <li class="page-item"><a class="page-link" href="/quienesSomos.html">2</a></li>
+          <li class="page-item"><a class="page-link" href="/miembrosFundadores.html">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="/error404.html" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      </article>
+      </section>
     </main>
   </body>
   <footer class="bg-dark">

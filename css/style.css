@@ -101,3 +101,31 @@ h1{
   no-repeat center center fixed;
   background-size: cover;
 }
+
+/* Pagina principal */
+
+#imagenFondoPP{
+  min-height: 90vh;
+  background: linear-gradient(rgba(5, 7, 12, 0.75),
+   rgba(5, 7, 12, 0.75)), 
+  url(/img/fondoPaginaInicio1.jpeg) 
+  no-repeat center center fixed;
+  background-size: cover;
+}
+
+#imagenFondoPP2{
+  min-height: 90vh;
+  background: linear-gradient(rgba(5, 7, 12, 0.75),
+   rgba(5, 7, 12, 0.75)), 
+  url(/img/fondoPaginaInicio2.jpeg) 
+  no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+@media all and (min-width: 576px) and (max-width: 768px) {
+/* texto  colkumnas categorías */
+#categorias {
+    font-size: 15px !important;
+  }
+}
